@@ -21,10 +21,9 @@ public class WeightedIntervalScheduling {
     static TreeMap<Integer, Job> jobs;
     static Integer[] M;
 
-    public void iterativeComputeOPT(int j) {
-        // Under review, unsure how to construct iterative approach
+    public static void iterativeComputeOPT() {
         M[0] = 0;
-        for (int i = 0; i < jobs.size(); i++)
+        for (int j = 1; j < jobs.size(); j++)
             M[j] = Math.max(jobs.get(j).value + M[p(j)], M[j-1]);
     }
 
@@ -90,9 +89,7 @@ public class WeightedIntervalScheduling {
         Job j8 = new Job(8,11,5);
         Job[] jobsArray = {j1, j2, j3, j4, j5, j6, j7, j8};
         labelJobsByFinishTimes(jobsArray);
-        for (int i = 0; i < jobsArray.length; i++) {
-            System.out.printf("%d start:%d, end:%d, value:%d\n", jobsArray[i].label, jobsArray[i].startTime, jobsArray[i].endTime, jobsArray[i].value);
-        }
+
         WeightedIntervalScheduling.jobs = new TreeMap<Integer, Job>();
         for (int i = 0; i < jobsArray.length; i++) {
             WeightedIntervalScheduling.jobs.put(jobsArray[i].label+1, jobsArray[i]);
@@ -113,10 +110,13 @@ public class WeightedIntervalScheduling {
 
         System.out.println(MComputeOPT(8));
 
-        System.out.println("Finding solution for j=8");
+        System.out.println("Finding solution for j=8 via recursive method:");
         findSolution(8);
 
+        System.out.println();
 
+        System.out.println("Finding solution for j=8 via iterative method:");
+        iterativeComputeOPT();
+        findSolution(8);
     }
-
 }
