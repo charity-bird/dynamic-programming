@@ -6,7 +6,17 @@ A collection of interesting dynamic programming problems and their solutions in 
 
 Given a set of jobs with start times, end times and weights corresponding to each job,
 find the maximum weight subset of mutually compatible jobs. Two jobs are compatible if
-they don't overlap in time. Source: https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pearson/06DynamicProgramming.pdf
+they don't overlap in time. 
+
+Source: https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pearson/06DynamicProgramming.pdf
+
+### Problem 2: Knapsack Problem
+
+Given n objects and a "knapsack," where item i weighs wi > 0 kilograms and has value 
+vi > 0, and where Knapsack has capacity of W kilograms, fill the knapsack so as to 
+maximumize the total value of the items selected.
+
+Source: https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pearson/06DynamicProgramming.pdf
 
 > "Logic, after all, is a trick devised by the human mind to solve certain types of
 > problems. But mathematics is more than logic, it is logic plus the creative process.
