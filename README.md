@@ -18,6 +18,13 @@ maximumize the total value of the items selected.
 
 Source: https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pearson/06DynamicProgramming.pdf
 
+### Problem 3: Maximum Contiguous Subarray
+
+Given a list of integers find the contiguous sublist with maximum sum and return that 
+integer.
+
+Source: https://www.math.umd.edu/~immortal/CMSC351/notes/maxcontiguoussum.pdf
+
 > "Logic, after all, is a trick devised by the human mind to solve certain types of
 > problems. But mathematics is more than logic, it is logic plus the creative process.
 > How the logical devices that consititute the tools of mathematics are to be combined
